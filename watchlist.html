@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <script src="https://kit.fontawesome.com/575fc302d5.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Watchlist</title>
+
+        <link rel="icon" href="./img/cinema.png">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="top">
+                <h1>My Watchlist</h1>
+                <h2><a href="index.html">Search for movies</a></h2>
+            </header>
+
+            <form class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="form-container">
+                    <input id="search-input" type="text" placeholder="Search for a movie">
+                    <button id="search-btn">Search</button>
+                </div>
+
+            </form>
+
+            <main class="main-content">
+                <h2>Unable to find what you're looking for. Please try another search.</h2>
+            </main>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+
+</html>

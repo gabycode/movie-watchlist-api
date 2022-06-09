@@ -2,20 +2,21 @@ const searchInput = document.getElementById("search-input")
 const searchBtn = document.getElementById("search-btn")
 const mainContent = document.getElementById("main-content")
 
-searchBtn.addEventListener('click', () => {
-    mainContent.innerHTML = ""
-    getMovieData().then(movieList => {
-        for(let movie in movieList) {
-        console.log("hi")
-        }
-    })
-})
+const apiKey = "fcd6c574"
 
-async function getMovieData(e) {
-    e.preventDefault
-    const searchValue = searchInput.value
-
-    const res = await fetch("http://www.omdbapi.com/?apikey=fcd6c574&s=${searchValue}")
-    const movies = await res.json()
-    return movies
+async function loadMovies(searchTerm) {
+    const url = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=${apiKey}`
+    const res = await fetch(`${url}`)
+    const data = await res.json()
+    if(data.Search === true) {
+        
+    }
 }
+
+function findMovies() {
+    let searchTerm = searchInput.value.trim()
+    if(searchTerm > 0) {
+        loadMovies(searchTerm)
+    }
+}
+

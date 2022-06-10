@@ -14,27 +14,32 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     </head>
+    
     <body>
+
         <div class="container">
             <header class="top">
                 <h1>Find your film</h1>
                 <h2><a href="watchlist.html">My Watchlist</a></h2>
             </header>
 
-            <form class="search-input">
+            <form id="search-form">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <div class="form-container">
-                    <input id="search-input" onkeyup="findMovies()" type="text" placeholder="Search for a movie">
-                    <button id="search-btn">Search</button>
+                    <input id="search-input" type="text" placeholder="Search for a movie">
+                    <button>Search</button>
                 </div>
                 
             </form>
 
             <main class="main-content">
-                <i class="fa-solid fa-film"></i>
-                <h1>Start exploring</h1>
+                <div id="main-content">
+                    <i class="fa-solid fa-film"></i>
+                    <h1>Start exploring</h1>
+                </div>                
             </main>
         </div>
+
         <script src="./index.js"></script>
     </body>
 </html>

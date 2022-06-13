@@ -9,7 +9,7 @@ let fetchedMoviesArray = []
 
 
 // I. add event to search bar(searchInput) & include function that fetchs the api data(loadMovieData)
-searchForm.addEventListener('click', e => {
+searchForm.addEventListener('submit', e => {
     e.preventDefault()
     loadMovieData(searchInputValue)
     resetPage()

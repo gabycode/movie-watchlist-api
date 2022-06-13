@@ -5,14 +5,7 @@
 }
 
 body {
-    background-color: #1c1c1c;
     font-family: 'Inter', sans-serif;
-}
-
-.container {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 10vh auto;
 }
 
 /* T O P */
@@ -89,10 +82,6 @@ form input {
     outline: none;
 }
 
-form input:focus {
-    border: 1px solid #b6b5b5;
-}
-
 form button {
     border: none;
     background-color: #e4e4e4;
@@ -114,16 +103,146 @@ form button:focus {
 
 .main-content {
     color: #dfdddd;
-    height: 50vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 550px;
     text-align: center;
     margin: 0 auto;
 }
 
-.main-content i {
+.main-content .fa-film {
     font-size: 3rem;
+    margin-top: 3em;
+}
+
+
+/* M O V I E    D I V */
+
+.movie-element {
+    display: flex;
+    margin-top: 1em;
+    color: #000;
+    margin: 40px 0;
+}
+
+.movie-element img {
+    width: 150px;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.movie-desc {
+    padding: 1em;
+}
+
+.title-rating, 
+.time-genre-add,
+.desc {
+    display: flex;
+    font-size: 1rem;
+    padding-bottom: .75em;
+}
+
+.title-rating {
+    align-items: center;
+    text-align: center;
+}
+
+.title-rating h2 {
+    padding-right: .85em;
+    font-weight: 600;
+}
+
+.title-rating i {
+    color: #fec654;
+    font-size: 0.8rem;
+    padding-right: .25em;
+}
+
+.rating {
+    font-size: 0.8rem;
+}
+
+.time-genre-add {
+    justify-content: space-between;
+    font-size: .8rem;
+    max-width: 80%;
+}
+
+.time-genre-add button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.time-genre-add button:hover,
+.time-genre-add button:focus {
+    color: #424852;
+}
+
+.time-genre-add button:active {
+    color: #fff;
+}
+
+.time-genre-add button i {
+    font-size: 1.2rem;
+    margin-right: .3em;
+}
+
+.desc {
+    text-align: left;
+    color: #6b7280;
+}
+
+@media (max-width: 576px) {
+    .top {
+        flex-direction: column;
+    }
+
+    form, 
+    .main-content {
+        width: 90%;
+    }
+
+    .movie-element {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .movie-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .title-rating {
+        font-size: .9rem;
+        margin-top: 1em;
+    }
+
+    .time-genre-add {
+        flex-direction: column;
+        align-content: space-between;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .time-genre-add p {
+        margin-bottom: .75em;
+    }
+
+    .time-genre-add button {
+        margin: 1em 0;
+    }
+
+    .desc {
+        text-align: center;
+        font-size: .95rem;
+    }
 }

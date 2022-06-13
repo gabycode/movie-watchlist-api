@@ -111,6 +111,10 @@ form button:focus {
     margin: 0 auto;
 }
 
+#main-content p {
+    margin-top: 10em;
+}
+
 .main-content .fa-film {
     font-size: 3rem;
     margin-top: 3em;

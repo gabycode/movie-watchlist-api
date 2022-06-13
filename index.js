@@ -30,11 +30,11 @@ async function loadMovieData(movie) {
     
     // if user attempts to click search without typing value in search bar
     if(!searchInput.value) {
-        mainContent.innerHTML = `<p>Please type a movie name</p>`
+        mainContent.innerHTML = `<p class="error">Please type a movie name</p>`
     } 
     // if movie name is not found display error message
     else if (data.Response === "False") {
-        mainContent.innerHTML = `<p>Movie not found. Please type another</p>`
+        mainContent.innerHTML = `<p class="error">Movie not found. Please type another</p>`
         console.log(data)
     } 
     // if movie name appears succesfully, run getMovies to get movie data
@@ -74,7 +74,7 @@ async function getMovies(ids) {
             displayMovies(fetchedMoviesArray, mainContent)
         } catch(err) {
             console.error(err)
-            mainContent.innerHTML = `<p>Oops. Couldn't find what you're looking for. Please type another search.</p>`
+            mainContent.innerHTML = `<p class="error">Oops. Couldn't find what you're looking for. Please type another search.</p>`
             
         }
     }     

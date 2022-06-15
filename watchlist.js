@@ -46,8 +46,7 @@ async function getMovieList(ids) {
             )
             displayWatchlist(watchlistFetched, watchlist)
             console.log(watchlistFetched)
-        } catch(err) {
-            console.error(err)
+        } catch {
             watchlist.innerHTML = `<p class="error">Oops. Couldn't find what you're looking for. Please type another search.</p>`
         }
     }

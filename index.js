@@ -72,8 +72,7 @@ async function getMovies(ids) {
                 }
             )
             displayMovies(fetchedMoviesArray, mainContent)
-        } catch(err) {
-            console.error(err)
+        } catch {
             mainContent.innerHTML = `<p class="error">Oops. Couldn't find what you're looking for. Please type another search.</p>`
             
         }

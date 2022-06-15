@@ -45,7 +45,8 @@ body {
     position: relative;
 }
 
-.top a:hover {
+.top a:hover,
+.top a:focus {
     border-bottom: .5px solid #fff;
 }
 
@@ -203,13 +204,54 @@ form button:focus {
     color: #6b7280;
 }
 
+
+/* W A T C H L I S T */
+
+.watchlist-content {
+    color: #dfdddd;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.msg {
+    margin-top: 8em;
+}
+
+.msg-add {
+    color: #000;
+    padding-top: .5em;
+}
+
+.msg-add i {
+    margin-right: .25em;
+    transition: 0.9s;
+}
+
+.msg-add i:hover,
+.msg-add i:focus {
+    transform: rotateZ(180deg);
+}
+
+.msg-add a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.msg-add a:hover,
+.msg-add a:focus {
+    color: #424852;
+}
+
 @media (max-width: 576px) {
     .top {
         flex-direction: column;
     }
 
     form, 
-    .main-content {
+    .main-content,
+    .watchlist-content {
         width: 90%;
     }
 
